@@ -18,26 +18,26 @@ jobs:
       - name: Submit package to Winget Community Repo (Stable)
         uses: vedantmgoyal2009/winget-releaser@4614300d5812e5df91cb02ef0edbece623d5dea8
         with:
-          identifier: Vendicated.Vencord
+          identifier: AmizRm.Ventord
           token: ${{ secrets.WINGET_PAT }}
-          installers-regex: 'VencordInstallerCli\.exe'
+          installers-regex: 'VentordInstallerCli\.exe'
           release-tag: ${{ inputs.tag || github.event.release.tag_name }}
           fork-user: shiggybot
 
       - name: Submit package to Winget Community Repo (PTB)
         uses: vedantmgoyal2009/winget-releaser@4614300d5812e5df91cb02ef0edbece623d5dea8
         with:
-          identifier: Vendicated.Vencord.PTB
+          identifier: AmizRm.Ventord.PTB
           token: ${{ secrets.WINGET_PAT }}
-          installers-regex: 'VencordInstallerCli\.exe'
+          installers-regex: 'VentordInstallerCli\.exe'
           release-tag: ${{ inputs.tag || github.event.release.tag_name }}
           fork-user: shiggybot
 
       - name: Submit package to Winget Community Repo (Canary)
         uses: vedantmgoyal2009/winget-releaser@4614300d5812e5df91cb02ef0edbece623d5dea8
         with:
-          identifier: Vendicated.Vencord.Canary
+          identifier: Vendicated.Ventord.Canary
           token: ${{ secrets.WINGET_PAT }}
-          installers-regex: 'VencordInstallerCli\.exe'
+          installers-regex: 'VentordInstallerCli\.exe'
           release-tag: ${{ inputs.tag || github.event.release.tag_name }}
           fork-user: shiggybot
