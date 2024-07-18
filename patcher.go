@@ -25,11 +25,11 @@ func init() {
 		Log.Debug("Using VENCORD_USER_DATA_DIR")
 		BaseDir = dir
 	} else if dir = os.Getenv("DISCORD_USER_DATA_DIR"); dir != "" {
-		Log.Debug("Using DISCORD_USER_DATA_DIR/../VencordData")
-		BaseDir = path.Join(dir, "..", "VencordData")
+		Log.Debug("Using DISCORD_USER_DATA_DIR/../VentordData")
+		BaseDir = path.Join(dir, "..", "VentordData")
 	} else {
 		Log.Debug("Using UserConfig")
-		BaseDir = appdir.New("Vencord").UserConfig()
+		BaseDir = appdir.New("Ventord").UserConfig()
 	}
 	FilesDir = path.Join(BaseDir, "dist")
 	if !ExistsFile(FilesDir) {

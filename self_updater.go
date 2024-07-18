@@ -15,7 +15,7 @@ import (
 	"path"
 	"runtime"
 	"time"
-	"vencordinstaller/buildinfo"
+	"ventordinstaller/buildinfo"
 )
 
 var IsSelfOutdated = false
@@ -46,15 +46,15 @@ func init() {
 }
 
 func GetInstallerDownloadLink() string {
-	const BaseUrl = "https://github.com/Vencord/Installer/releases/latest/download/"
+	const BaseUrl = "https://github.com/AmizRm/Installer/releases/latest/download/"
 	switch runtime.GOOS {
 	case "windows":
-		filename := Ternary(buildinfo.UiType == buildinfo.UiTypeCli, "VencordInstallerCli.exe", "VencordInstaller.exe")
+		filename := Ternary(buildinfo.UiType == buildinfo.UiTypeCli, "VentordInstallerCli.exe", "VentordInstaller.exe")
 		return BaseUrl + filename
 	case "darwin":
-		return BaseUrl + "VencordInstaller.MacOS.zip"
+		return BaseUrl + "VentordInstaller.MacOS.zip"
 	case "linux":
-		return BaseUrl + "VencordInstallerCli-linux"
+		return BaseUrl + "VentordInstallerCli-linux"
 	default:
 		return ""
 	}
@@ -90,7 +90,7 @@ func UpdateSelf() error {
 	}
 	defer res.Body.Close()
 
-	tmp, err := os.CreateTemp(ownExeDir, "VencordInstallerUpdate")
+	tmp, err := os.CreateTemp(ownExeDir, "VentordInstallerUpdate")
 	if err != nil {
 		return fmt.Errorf("Failed to create tempfile: %w", err)
 	}

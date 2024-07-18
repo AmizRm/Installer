@@ -1,4 +1,4 @@
-module vencordinstaller
+module ventordinstaller
 
 go 1.20
 
